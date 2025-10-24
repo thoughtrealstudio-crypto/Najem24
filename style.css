@@ -753,3 +753,121 @@ h1, h2, h3, h4 {
         display: none;
     }
 }
+
+
+//animacje
+
+/* ============================================ */
+/*                 ANIMATIONS                   */
+/* ============================================ */
+
+/* --- Keyframes (Definicje animacji) --- */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* --- Klasy pomocnicze do animacji przy scrollowaniu --- */
+.animate-on-scroll {
+    opacity: 0; /* Domyślnie ukryte */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: none; /* Reset transformacji po pojawieniu */
+}
+
+/* --- Aplikowanie animacji, gdy element jest widoczny --- */
+
+.animate-on-scroll.is-visible.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-on-scroll.is-visible.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-on-scroll.is-visible.scale-up {
+    animation: scaleUp 0.8s ease-out forwards;
+}
+
+.animate-on-scroll.is-visible.fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-on-scroll.is-visible.fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+
+/* --- Ulepszone efekty hover na kartach --- */
+.car-card, .testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover, .testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* --- Lepszy hover na sekcji Oferta --- */
+.overlay-item p {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.overlay-item:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
