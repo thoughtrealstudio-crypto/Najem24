@@ -56,15 +56,14 @@ header .container {
     align-items: center;
 }
 
+
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--text-color);
+    /* The text styling properties have been removed */
+    transition: opacity 0.3s ease; /* Optional: adds a slight fade on hover */
 }
 
 .logo:hover {
-    color: var(--accent-color);
-    transition: color 0.3s ease;
+    opacity: 0.9;
 }
 
 nav ul {
