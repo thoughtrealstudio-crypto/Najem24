@@ -85,25 +85,90 @@
                 </section>
                 
                 <!-- FAQ SECTION -->
+                <!-- START: Replace the old FAQ section with this new one -->
                 <div class="faq-section">
                     <h2 class="section-title">Często zadawane pytania (FAQ)</h2>
-                    <div class="faq-item">
-                        <h4>Kto dokładnie płaci za wynajem samochodu?</h4>
-                        <p>Koszt wynajmu w całości pokrywany jest z polisy OC sprawcy kolizji lub wypadku. Dla Ciebie usługa jest całkowicie bezpłatna.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>Na jak długo przysługuje mi samochód zastępczy?</h4>
-                        <p>Samochód zastępczy przysługuje Ci na cały uzasadniony technologicznie czas naprawy Twojego pojazdu. W przypadku szkody całkowitej, czas ten obejmuje okres od dnia zdarzenia do dnia wypłaty odszkodowania.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>Czy muszę wpłacać kaucję lub blokować środki na karcie?</h4>
-                        <p>Nie. Wynajem z OC sprawcy w Najem24 jest w 100% bezgotówkowy i nie wymaga żadnej kaucji ani preautoryzacji karty kredytowej.</p>
+                    <div class="faq-accordion">
+                        
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Kto dokładnie płaci za wynajem samochodu?</h4>
+                                <div class="faq-toggle">+</div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Koszt wynajmu w całości pokrywany jest z polisy OC sprawcy kolizji lub wypadku. Dla Ciebie usługa jest całkowicie bezpłatna.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Na jak długo przysługuje mi samochód zastępczy?</h4>
+                                <div class="faq-toggle">+</div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Samochód zastępczy przysługuje Ci na cały uzasadniony technologicznie czas naprawy Twojego pojazdu. W przypadku szkody całkowitej, czas ten obejmuje okres od dnia zdarzenia do dnia wypłaty odszkodowania.</p>
+                            </div>
+                        </div>
+                
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Czy muszę wpłacać kaucję lub blokować środki na karcie?</h4>
+                                <div class="faq-toggle">+</div>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Nie. Wynajem z OC sprawcy w Najem24 jest w 100% bezgotówkowy i nie wymaga żadnej kaucji ani preautoryzacji karty kredytowej.</p>
+                            </div>
+                        </div>
+                
                     </div>
                 </div>
+                <!-- END: New FAQ section -->
 
             </div>
         </section>
     </main>
+        <!-- ... your existing main content ... -->
+    </main>
+
+    <!-- ADD THIS SCRIPT BLOCK BEFORE THE FOOTER -->
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Check if the clicked item is already open
+                const isOpen = item.classList.contains('active');
+
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle the clicked item
+                if (isOpen) {
+                    item.classList.remove('active');
+                } else {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Najem24. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
 
     <footer>
         <div class="container">
