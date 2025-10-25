@@ -607,33 +607,76 @@ nav a.active {
 }
 
 /* --- FAQ Section --- */
+/* ===== FAQ ACCORDION STYLES (ADD TO END OF CSS) ===== */
+
 .faq-section {
     max-width: 800px;
-    margin: 0 auto; /* Center the FAQ section */
+    margin: 0 auto;
+}
+
+.faq-accordion {
+    margin-top: 40px;
 }
 
 .faq-item {
-    padding-bottom: 25px;
-    margin-bottom: 25px;
     border-bottom: 1px solid var(--border-color);
 }
 
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover h4 {
+    color: var(--accent-color);
+}
+
+.faq-question h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.faq-toggle {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--accent-color);
+    transition: transform 0.4s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-answer p {
+    color: var(--secondary-text-color);
+    padding: 0;
+    margin: 0;
+}
+
+/* --- Active State --- */
+.faq-item.active .faq-answer {
+    /* Set a max-height large enough for your content */
+    max-height: 200px; 
+    padding-bottom: 25px;
+}
+
+.faq-item.active .faq-toggle {
+    /* Rotates the '+' into a 'x' */
+    transform: rotate(45deg);
+}
 .faq-item:last-child {
     border-bottom: none;
     margin-bottom: 0;
 }
-
-.faq-item h4 {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.faq-item p {
-    color: var(--secondary-text-color);
-}
-
 /*KONTAKT*/
 
 /* ===== STYLES FOR KONTAKT.HTML (ADD TO END OF CSS) ===== */
