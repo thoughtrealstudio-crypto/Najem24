@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car2Lease - Najlepsze w leasingu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- =================   HEADER   ================= -->
+
+    <!-- ============================================ -->
+    <!--                  HEADER                      -->
+    <!-- ============================================ -->
     <header class="main-header">
         <div class="container">
             <a href="index.html" class="logo">
@@ -49,10 +52,10 @@
         <section class="featured-cars-section">
             <div class="container">
                 <div class="section-header animate-on-scroll fade-in-up" style="text-align: center;">
-                    <h2>Dostępne od ręki</h2>
+                    <h2 style="font-size: 36px; font-weight: 700;">Dostępne od ręki</h2>
                 </div>
                 <div class="cars-grid">
-                    <!-- Skopiuj tutaj 4 karty samochodów z oryginalnego HTML -->
+                    <!-- Tu wstaw 4 karty samochodów z poprzednich odpowiedzi, każda z klasą "animate-on-scroll scale-up" i opóźnieniem -->
                     <article class="car-card animate-on-scroll scale-up">...</article>
                     <article class="car-card animate-on-scroll scale-up" style="animation-delay: 0.1s;">...</article>
                     <article class="car-card animate-on-scroll scale-up" style="animation-delay: 0.2s;">...</article>
@@ -63,7 +66,7 @@
         </section>
         
         <!-- =================   ABOUT US (Teaser)   ================= -->
-        <section id="about" class="about-section">
+        <section class="about-section">
             <div class="container">
                 <div class="about-grid">
                     <div class="about-image animate-on-scroll fade-in-left"><img src="https://i.imgur.com/kS9Lz3y.png" alt="Zespół Car2Lease przy pracy"></div>
@@ -77,9 +80,72 @@
         </section>
     </main>
     
-    <!-- =================   FOOTER   ================= -->
-    <footer id="footer-placeholder" class="site-footer"></footer>
+    <!-- ============================================ -->
+    <!--                   FOOTER                     -->
+    <!-- ============================================ -->
+    <footer class="site-footer">
+        <div class="footer-shape"></div>
+        <div class="container">
+            <div class="footer-cta animate-on-scroll fade-in-up">
+                <h2>Gotowy na swój nowy samochód?</h2>
+                <p>Porozmawiajmy o najlepszej ofercie dla Ciebie.</p>
+                <a href="kontakt.html" class="btn btn-primary">Skontaktuj się z nami</a>
+            </div>
+            <div class="footer-main">
+                <div class="footer-column animate-on-scroll fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="footer-logo">
+                        <svg width="40" height="40" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" stroke="#d4af37" stroke-width="10" fill="none" /><text x="50" y="62" font-size="50" font-weight="bold" fill="#d4af37" text-anchor="middle">C</text></svg>
+                        <span>CAR2LEASE</span>
+                    </div>
+                    <p>15 lat doświadczenia w branży motoryzacyjnej przekładamy na atrakcyjność i jakość naszej oferty.</p>
+                </div>
+                <div class="footer-column animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
+                    <h3>Szybkie Linki</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Strona Główna</a></li>
+                        <li><a href="oferta.html">Oferta</a></li>
+                        <li><a href="o-nas.html">O Nas</a></li>
+                        <li><a href="wynajem-z-oc.html">Wynajem z OC</a></li>
+                        <li><a href="#">Polityka Prywatności</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">
+                    <h3>Kontakt</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>ul. Kordeckiego 2la, 05-500 Piaseczno</span></li>
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:+48797577000">+48 797 577 000</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:kontakt@car2lease.pl">kontakt@car2lease.pl</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright-text">&copy; <span id="year"></span> Car2Lease. Wszelkie prawa zastrzeżone.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <script> /* Skrypt do animacji */ </script>
+    <!-- ============================================ -->
+    <!--                   SCRIPTS                    -->
+    <!-- ============================================ -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const targets = document.querySelectorAll('.animate-on-scroll');
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            targets.forEach(target => { observer.observe(target); });
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
