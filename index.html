@@ -1,50 +1,115 @@
-<!-- Plik: index.html -->
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car2Lease - Strona Główna</title>
-    
-    <!-- Linki do wszystkich arkuszy stylów -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-    
-    <!-- Link do Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Najem24 - Nowoczesny Wynajem Samochodów</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Pusty kontener na nagłówek -->
-    <header id="header-placeholder" class="main-header"></header>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Najem24</a>
+            <nav>
+                <ul>
+                    <li><a href="#oferta">Oferta</a></li>
+                    <li><a href="#wynajem-oc">Wynajem z OC</a></li>
+                    <li><a href="#o-nas">O Nas</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
-        <!-- Unikalna zawartość dla strony głównej -->
-        <section class="hero-section">
-            <div class="hero-background"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="animate-on-scroll fade-in-up">Najlepsze<br>w leasingu</h1>
-                    <p class="animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">Sprawdź nasze propozycje samochodów dostępnych od ręki.</p>
-                    <a href="oferta.html" class="btn btn-primary animate-on-scroll fade-in-up" style="animation-delay: 0.4s;">Zobacz Ofertę <i class="fas fa-arrow-right"></i></a>
+        <!-- ===== HERO SECTION ===== -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Nowoczesny wynajem samochodów. <br> Prosto i szybko.</h1>
+                <p>Znajdź idealne auto dla siebie lub Twojej firmy.</p>
+                <a href="#oferta" class="cta-button">Zobacz naszą ofertę</a>
+            </div>
+        </section>
+
+        <!-- ===== WHY US SECTION ===== -->
+        <section id="dlaczego-my" class="dark-section">
+            <div class="container content-split">
+                <div class="info-left">
+                    <h2>Dlaczego Najem24?</h2>
+                    <p>
+                        Kierowani pasją do motoryzacji, stworzyliśmy Najem24, aby oferować wynajem samochodów na najwyższym poziomie. Łączymy szeroką flotę nowoczesnych aut z elastycznymi warunkami i transparentnymi zasadami. Każdy klient jest dla nas priorytetem.
+                    </p>
+                    <blockquote>
+                        "Twoja wygoda i bezpieczeństwo to nasz cel."
+                    </blockquote>
+                </div>
+                <div class="stats-right">
+                    <ul>
+                        <li>
+                            <span class="number">10+</span>
+                            <span>Lat na rynku</span>
+                        </li>
+                        <li>
+                            <span class="number">500+</span>
+                            <span>Zadowolonych klientów</span>
+                        </li>
+                        <li>
+                            <span class="number">150+</span>
+                            <span>Aut w ofercie</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
-        
-        <section class="featured-cars-section" style="padding: 80px 0;">
+
+        <!-- ===== HOW IT WORKS SECTION ===== -->
+        <section id="jak-to-dziala" class="dark-section">
             <div class="container">
-                <h2>Przykładowe auta</h2>
-                <!-- ... treść sekcji ... -->
+                <h2 class="section-title">Jak to działa? Wynajem w 4 krokach.</h2>
+                <p class="section-subtitle">Mój oparty na współpracy i przejrzysty proces tworzenia.</p>
+                <div class="process-timeline">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Wybierz idealne auto</h3>
+                            <p>Przeglądaj naszą szeroką ofertę i znajdź samochód dopasowany do Twoich potrzeb.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Określ warunki najmu</h3>
+                            <p>Dostosuj czas i limit kilometrów do swojego planu. Oferujemy elastyczne pakiety.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Wypełnij formularz online</h3>
+                            <p>Rezerwacja zajmie Ci tylko kilka minut, bez zbędnych formalności i ukrytych kosztów.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Odbierz kluczyki i ruszaj w drogę!</h3>
+                            <p>Twoje auto będzie czekać gotowe do jazdy w wyznaczonym miejscu i czasie.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Pusty kontener na stopkę -->
-    <footer id="footer-placeholder" class="site-footer"></footer>
-
-    <!-- Pojedynczy link do naszego skryptu ładującego -->
-    <script src="js/component-loader.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Najem24. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
