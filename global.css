@@ -62,6 +62,15 @@ header .container {
     transition: opacity 0.3s ease; /* Optional: adds a slight fade on hover */
 }
 
+/* ===== LOGO IMAGE STYLE (UPDATED) ===== */
+.logo img {
+    /* Let's try a smaller height. Feel free to experiment! */
+    height: 35px; 
+    
+    width: auto; /* This makes sure the logo doesn't get stretched */
+    display: block; 
+}
+
 .logo:hover {
     opacity: 0.9;
 }
