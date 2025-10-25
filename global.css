@@ -209,6 +209,7 @@ nav a:hover {
     font-weight: 700;
     color: var(--accent-color);
     min-width: 120px;
+    margin-left: 5 px;
 }
 
 /* ===== HOW IT WORKS SECTION ===== */
