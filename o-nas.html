@@ -3,61 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Nas - Car2Lease</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>.hero-section { height: 50vh; min-height: 400px; } .hero-content h1 { color: #fff; }</style>
+    <title>O Nas - Najem24</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- =================   HEADER   ================= -->
-    <header class="main-header">
+    <header>
         <div class="container">
-            <a href="index.html" class="logo">...</a>
-            <nav class="main-nav">
+            <a href="index.html" class="logo">Najem24</a>
+            <nav>
                 <ul>
-                    <!-- Note: Links now point to the index.html sections -->
-                    <li><a href="/oferta.html" class="active">Oferta</a></li>
-                    <li><a href="/wynajem-z-oc.html">Wynajem z OC</a></li>
-                    <li><a href="/o-nas.html">O Nas</a></li>
-                    <li><a href="/kontakt.html">Kontakt</a></li>
+                    <li><a href="oferta.html">Oferta</a></li>
+                    <li><a href="index.html#wynajem-oc">Wynajem z OC</a></li>
+                    <li><a href="o-nas.html" class="active">O Nas</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
                 </ul>
             </nav>
-            <div class="header-actions">...</div>
         </div>
     </header>
 
     <main>
-        <!-- =================   SUBPAGE HERO   ================= -->
-        <section class="hero-section">
-            <div class="hero-background"></div>
-            <div class="container"><div class="hero-content"><h1 class="animate-on-scroll fade-in-up">Kim Jesteśmy</h1></div></div>
-        </section>
+        <section id="about-page" class="dark-section">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Pasja, która napędza Twój komfort</h1>
+                    <p>Poznaj historię i wartości, które stoją za Najem24.</p>
+                </div>
 
-        <!-- =================   ABOUT US (Pełna sekcja)   ================= -->
-        <section class="about-section" style="padding-top: 80px;">
-             <!-- Skopiuj tutaj całą sekcję <section id="about"> z oryginalnego HTML -->
-        </section>
-        
-        <!-- =================   STATS / BENEFITS   ================= -->
-        <section class="stats-section">
-             <!-- Skopiuj tutaj całą sekcję <section class="stats-section"> z oryginalnego HTML -->
-        </section>
+                <!-- MISSION SECTION -->
+                <div class="about-mission-section">
+                    <div class="mission-text">
+                        <h2>Nasza Misja</h2>
+                        <p>W Najem24 wierzymy, że wynajem samochodu powinien być prosty, transparentny i dostosowany do indywidualnych potrzeb. Naszą misją jest dostarczanie najwyższej jakości usług, opartych na zaufaniu i nowoczesnych rozwiązaniach. </p>
+                        <p>Zaczynaliśmy jako mała, lokalna firma z kilkoma autami, napędzani pasją do motoryzacji. Dziś, po latach doświadczeń, oferujemy szeroką flotę pojazdów, ale nasze pierwotne wartości pozostają niezmienne: stawiać klienta zawsze na pierwszym miejscu.</p>
+                    </div>
+                    <div class="mission-image">
+                        <!-- Replace with an image of your office, team, or a scenic road -->
+                        <img src="https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Nowoczesny samochód o zmierzchu">
+                    </div>
+                </div>
 
-        <!-- =================   TESTIMONIALS   ================= -->
-        <section class="testimonials-section">
-            <!-- Skopiuj tutaj całą sekcję <section class="testimonials-section"> z oryginalnego HTML -->
+                <!-- VALUES SECTION -->
+                <div class="our-values-section">
+                    <h2 class="section-title">Nasze Wartości</h2>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <h3>Jakość i Bezpieczeństwo</h3>
+                            <p>Każdy samochód w naszej flocie przechodzi regularne przeglądy techniczne, aby zapewnić Ci pełne bezpieczeństwo i niezawodność na drodze.</p>
+                        </div>
+                        <div class="value-card">
+                            <h3>Transparentność</h3>
+                            <p>Oferujemy jasne i przejrzyste warunki najmu. U nas nie znajdziesz ukrytych opłat ani niejasnych zapisów w umowie. Pełna uczciwość to nasz standard.</p>
+                        </div>
+                        <div class="value-card">
+                            <h3>Elastyczność</h3>
+                            <p>Rozumiemy, że potrzeby się zmieniają. Dlatego oferujemy elastyczne pakiety wynajmu – od krótkoterminowego po długoterminowy leasing dla firm.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEAM SECTION -->
+                <div class="team-section">
+                    <h2 class="section-title">Poznaj nasz zespół</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Jan Kowalski">
+                            <h3>Jan Kowalski</h3>
+                            <p class="role">Założyciel i CEO</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Anna Nowak">
+                            <h3>Anna Nowak</h3>
+                            <p class="role">Manager ds. Floty</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Piotr Wiśniewski">
+                            <h3>Piotr Wiśniewski</h3>
+                            <p class="role">Specjalista ds. Obsługi Klienta</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
     </main>
-    
-    <!-- =================   FOOTER   ================= -->
-    <footer class="site-footer">
-        <!-- Skopiuj tu całą stopkę (identyczną jak na stronie głównej) -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Najem24. Wszystkie prawa zastrzeżone.</p>
+        </div>
     </footer>
 
-    <!-- =================   SCRIPTS   ================= -->
-    <script>
-        // Skopiuj tu cały blok <script> (identyczny jak na stronie głównej)
-    </script>
 </body>
 </html>
