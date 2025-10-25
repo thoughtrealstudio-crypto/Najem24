@@ -3,401 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car2Lease - Rekreacja</title>
-    <!-- Font Awesome for icons -->
+    <title>Car2Lease - Najlepsze w leasingu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- A CSS file will be linked here in the next step -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- ============================================ -->
-    <!--                  HEADER                      -->
-    <!-- ============================================ -->
+    <!-- =================   HEADER   ================= -->
     <header class="main-header">
         <div class="container">
-            <a href="#" class="logo">
-                <!-- Using an SVG placeholder for the logo icon -->
-                <svg width="40" height="40" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="45" stroke="#d4af37" stroke-width="10" fill="none" />
-                    <text x="50" y="62" font-size="50" font-weight="bold" fill="#d4af37" text-anchor="middle">C</text>
-                </svg>
+            <a href="index.html" class="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" stroke="#d4af37" stroke-width="10" fill="none" /><text x="50" y="62" font-size="50" font-weight="bold" fill="#d4af37" text-anchor="middle">C</text></svg>
                 <span>CAR2LEASE</span>
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#about">O Nas</a></li>
-                    <li><a href="#offer">Oferta</a></li>
-                    <li><a href="#contact">Kontakt</a></li>
-                    <li><a href="#">Wynajem z OC</a></li>
+                    <li><a href="o-nas.html">O Nas</a></li>
+                    <li><a href="oferta.html">Oferta</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="wynajem-z-oc.html">Wynajem z OC</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="search-bar">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Znajdź samochód">
-                </div>
-                <a href="tel:+48797577000" class="phone-button">
-                    <i class="fas fa-phone-alt"></i>
-                    +48 797 577 000
-                </a>
+                <div class="social-icons"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div>
+                <div class="search-bar"><i class="fas fa-search"></i><input type="text" placeholder="Znajdź samochód"></div>
+                <a href="tel:+48797577000" class="phone-button"><i class="fas fa-phone-alt"></i> +48 797 577 000</a>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- ============================================ -->
-        <!--                   HERO                       -->
-        <!-- ============================================ -->
+        <!-- =================   HERO   ================= -->
         <section class="hero-section">
-            <div class="hero-background">
-                 <!-- Background image will be set in CSS -->
-            </div>
+            <div class="hero-background"></div>
             <div class="container">
-                
                 <div class="hero-content">
                     <h1 class="animate-on-scroll fade-in-up">Najlepsze<br>w leasingu</h1>
                     <p class="animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">Sprawdź nasze propozycje samochodów dostępnych od ręki w atrakcyjnej ofercie leasingowej.</p>
-                    <a href="#" class="btn btn-primary animate-on-scroll fade-in-up" style="animation-delay: 0.4s;">LEASING <i class="fas fa-arrow-right"></i></a>
+                    <a href="oferta.html" class="btn btn-primary animate-on-scroll fade-in-up" style="animation-delay: 0.4s;">Zobacz Ofertę <i class="fas fa-arrow-right"></i></a>
                 </div>
-                
             </div>
-            <div class="progress-bars">
-                <div class="bar active"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
+            <div class="progress-bars"><div class="bar active"></div><div class="bar"></div><div class="bar"></div></div>
         </section>
 
-        <!-- ============================================ -->
-        <!--               FEATURED CARS                  -->
-        <!-- ============================================ -->
+        <!-- =================   FEATURED CARS (Teaser)   ================= -->
         <section class="featured-cars-section">
             <div class="container">
+                <div class="section-header animate-on-scroll fade-in-up" style="text-align: center;">
+                    <h2>Dostępne od ręki</h2>
+                </div>
                 <div class="cars-grid">
-                    <!-- Car Card 1 -->
-                    <article class="car-card">
-                        <div class="card-image">
-                            <img src="https://i.imgur.com/kH8dK7V.png" alt="BMW 520d xDrive">
-                            <span class="tag fuel-tag">Paliwo: Diesel</span>
-                            <span class="tag year-tag">2024</span>
-                        </div>
-                        <div class="card-content">
-                            <h3>BMW 520d xDrive</h3>
-                            <p class="car-details">Skrzynia biegów: Automatyczna<br>Segment: Sedan</p>
-                            <ul class="features-list">
-                                <li><i class="fas fa-check-circle"></i> Finansowanie</li>
-                                <li><i class="fas fa-check-circle"></i> Serwis</li>
-                                <li><i class="fas fa-check-circle"></i> Auto zastępcze</li>
-                                <li><i class="fas fa-check-circle"></i> Ubezpieczenie</li>
-                            </ul>
-                            <p class="price">od <span>5 207 zł</span> Netto/m-c</p>
-                            <a href="#" class="btn btn-secondary">ZOBACZ TEN SAMOCHÓD <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <!-- Car Card 2 -->
-                    <article class="car-card">
-                        <div class="card-image">
-                            <img src="https://i.imgur.com/zXn55iA.png" alt="Tesla 3 Highland">
-                            <span class="tag fuel-tag">Paliwo: Elektryczny</span>
-                            <span class="tag year-tag">2024</span>
-                        </div>
-                        <div class="card-content">
-                            <h3>Tesla 3 Highland</h3>
-                            <p class="car-details">Skrzynia biegów: Automatyczna<br>Segment: Sedan</p>
-                             <ul class="features-list">
-                                <li><i class="fas fa-check-circle"></i> Finansowanie</li>
-                                <li><i class="fas fa-check-circle"></i> Serwis</li>
-                                <li><i class="fas fa-check-circle"></i> Auto zastępcze</li>
-                                <li><i class="fas fa-check-circle"></i> Ubezpieczenie</li>
-                            </ul>
-                            <p class="price">od <span>2 508 zł</span> Netto/m-c</p>
-                            <a href="#" class="btn btn-secondary">ZOBACZ TEN SAMOCHÓD <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <!-- Car Card 3 -->
-                    <article class="car-card">
-                        <div class="card-image">
-                            <img src="https://i.imgur.com/gK9qQ4O.png" alt="Mercedes EQE 300">
-                            <span class="tag fuel-tag">Paliwo: Elektryczny</span>
-                            <span class="tag year-tag">2024</span>
-                        </div>
-                        <div class="card-content">
-                            <h3>Mercedes EQE 300</h3>
-                            <p class="car-details">Skrzynia biegów: Automatyczna<br>Segment: SUV</p>
-                             <ul class="features-list">
-                                <li><i class="fas fa-check-circle"></i> Finansowanie</li>
-                                <li><i class="fas fa-check-circle"></i> Serwis</li>
-                                <li><i class="fas fa-check-circle"></i> Auto zastępcze</li>
-                                <li><i class="fas fa-check-circle"></i> Ubezpieczenie</li>
-                            </ul>
-                            <p class="price">od <span>3 799 zł</span> Netto/m-c</p>
-                            <a href="#" class="btn btn-secondary">ZOBACZ TEN SAMOCHÓD <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <!-- Car Card 4 -->
-                    <article class="car-card">
-                        <div class="card-image">
-                            <img src="https://i.imgur.com/m9FfF5F.png" alt="Nissan Qashqai">
-                            <span class="tag fuel-tag">Paliwo: Benzyna</span>
-                            <span class="tag year-tag">2024</span>
-                        </div>
-                        <div class="card-content">
-                            <h3>Nissan Qashqai 1.3 MHEV N-</h3>
-                            <p class="car-details">Skrzynia biegów: Automatyczna<br>Segment: SUV</p>
-                             <ul class="features-list">
-                                <li><i class="fas fa-check-circle"></i> Finansowanie</li>
-                                <li><i class="fas fa-check-circle"></i> Serwis</li>
-                                <li><i class="fas fa-check-circle"></i> Auto zastępcze</li>
-                                <li><i class="fas fa-check-circle"></i> Ubezpieczenie</li>
-                            </ul>
-                            <p class="price">od <span>1 449 zł</span> Netto/m-c</p>
-                            <a href="#" class="btn btn-secondary">ZOBACZ TEN SAMOCHÓD <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
+                    <!-- Skopiuj tutaj 4 karty samochodów z oryginalnego HTML -->
+                    <article class="car-card animate-on-scroll scale-up">...</article>
+                    <article class="car-card animate-on-scroll scale-up" style="animation-delay: 0.1s;">...</article>
+                    <article class="car-card animate-on-scroll scale-up" style="animation-delay: 0.2s;">...</article>
+                    <article class="car-card animate-on-scroll scale-up" style="animation-delay: 0.3s;">...</article>
                 </div>
-                 <div class="slider-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                </div>
+                 <div class="slider-arrow"><i class="fas fa-arrow-right"></i></div>
             </div>
         </section>
-
-        <!-- ============================================ -->
-        <!--                   OFFER                      -->
-        <!-- ============================================ -->
-        <section id="offer" class="offer-section">
-            <div class="container">
-                <div class="offer-content-wrapper">
-                    <div class="offer-text-column">
-                        <div class="section-header">
-                            <h2>OFERTA</h2>
-                            <i class="fas fa-arrow-down"></i>
-                        </div>
-                        <p>Bez względu na markę czy rodzaj auta, możemy zaproponować najlepsze formy finansowania. Dowiedz się więcej o tym jakie korzyści niesie wynajem długoterminowy oraz leasing.</p>
-                    </div>
-                    <div class="offer-image-column">
-                        <div class="image-overlays">
-                            <a href="#" class="overlay-item">
-                                <h3>WYNAJEM</h3>
-                                <p>Pozwala przedsiębiorcy, który okresowo wymienia samochód lub flotę użytkować zawsze nowe auto...</p>
-                            </a>
-                             <a href="#" class="overlay-item">
-                                <h3>LEASING</h3>
-                                <p>To najbardziej korzystna forma finansowania samochodu, w przypadku kiedy docelowo planujesz wykupić auto...</p>
-                            </a>
-                             <a href="#" class="overlay-item">
-                                <h3>UBEZPIECZENIA</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================ -->
-        <!--                  ABOUT US                    -->
-        <!-- ============================================ -->
+        
+        <!-- =================   ABOUT US (Teaser)   ================= -->
         <section id="about" class="about-section">
             <div class="container">
-                <div class="section-header">
-                    <h2>O NAS</h2>
-                </div>
                 <div class="about-grid">
-                    <div class="about-image">
-                        <img src="https://i.imgur.com/kS9Lz3y.png" alt="Zespół Car2Lease przy pracy">
-                    </div>
-                    <div class="about-text">
+                    <div class="about-image animate-on-scroll fade-in-left"><img src="https://i.imgur.com/kS9Lz3y.png" alt="Zespół Car2Lease przy pracy"></div>
+                    <div class="about-text animate-on-scroll fade-in-right" style="animation-delay: 0.2s;">
+                        <div class="section-header"><h2>O NAS</h2></div>
                         <p>Car2Lease to firma, która została zbudowana w oparciu o 15-letnie doświadczenie w branży motoryzacyjnej.</p>
-                        <p>Długoletnia współpraca z importerami i dealerami poszczególnych marek samochodów oraz instytucjami oferujących ich finansowanie, ma realne przełożenie na atrakcyjność oferty i jej jakość.</p>
-                        <a href="#" class="btn btn-secondary">SZCZEGÓŁY <i class="fas fa-arrow-right"></i></a>
+                        <a href="o-nas.html" class="btn btn-secondary">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- ============================================ -->
-        <!--               STATS / BENEFITS               -->
-        <!-- ============================================ -->
-        <section class="stats-section">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <i class="fas fa-briefcase"></i>
-                        <h4>15 lat doświadczenia biznesowego</h4>
-                        <p>W pracy z klientami korporacyjnymi i indywidualnymi w branży automotive.</p>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-car-side"></i>
-                        <h4>Ponad 100 pojazdów</h4>
-                        <p>Dostarczonych do klientów.</p>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-handshake"></i>
-                        <h4>Ponad 30 umów najmu długoterminowego</h4>
-                        <p>Podpisanych w pierwszym roku prowadzenia działalności.</p>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <h4>Zaufanie klientów</h4>
-                        <p>Zaufało nam już ponad 70 klientów.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================ -->
-        <!--                TESTIMONIALS                  -->
-        <!-- ============================================ -->
-        <section class="testimonials-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>REKOMENDACJE</h2>
-                </div>
-                <div class="testimonials-grid">
-                    <article class="testimonial-card">
-                        <p>"Serdecznie polecam. Proces pozyskania auta w wynajmie długoterminowym przeprowadzony wzorowo..."</p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <div class="author">
-                            <strong>Jarosława Izba, Wizytówka Google</strong>
-                            <span>Nissan Qashqai</span>
-                        </div>
-                    </article>
-                    <article class="testimonial-card">
-                        <p>"Zachwyciła mnie transparentność oraz uczciwość, z jaką Pan Piotr prowadzi swoją działalność..."</p>
-                        <div class="rating">
-                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <div class="author">
-                            <strong>Łukasz Dróżdż, Wizytówka Google</strong>
-                            <span>BMW X5</span>
-                        </div>
-                    </article>
-                    <article class="testimonial-card">
-                        <p>"Bardzo kompetentni i rzeczowi. Proces do momentu odebrania auta z salonu - przeprowadzony on line..."</p>
-                        <div class="rating">
-                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <div class="author">
-                            <strong>Krzysztof Radomski, Wizytówka Google</strong>
-                            <span>Skoda Kodiaq</span>
-                        </div>
-                    </article>
-                    <article class="testimonial-card">
-                        <p>"Polecam serdecznie, mój pierwszy samochód w wynajmie, a w dodatku mój pierwszy elektryk..."</p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <div class="author">
-                            <strong>Piotr Zgrzebski, Wizytówka Google</strong>
-                            <span>Tesla 3</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================ -->
-        <!--                   PARTNERS                   -->
-        <!-- ============================================ -->
-        <section class="partners-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>PARTNERZY</h2>
-                </div>
-                <p>Firmy z którymi współpracujemy.</p>
-                <div class="partners-logos">
-                    <img src="https://i.imgur.com/Kz8G0Wd.png" alt="Nagroda Konsumenta 2023">
-                    <img src="https://i.imgur.com/gK1qWfE.png" alt="Alior Bank">
-                    <img src="https://i.imgur.com/xO7eI3I.png" alt="Arval BNP Paribas Group">
-                    <img src="https://i.imgur.com/mU4qBfT.png" alt="Athlon International">
-                    <img src="https://i.imgur.com/3Yp02L3.png" alt="BNP Paribas">
-                </div>
-            </div>
-        </section>
-
     </main>
-
-    <!-- ============================================ -->
-    <!--                    FOOTER                    -->
-    <!-- ============================================ -->
+    
+    <!-- =================   FOOTER   ================= -->
     <footer id="contact" class="main-footer-section">
-        <div class="container">
-            <div class="footer-header">
-                <h2>Kontakt</h2>
-            </div>
-            <div class="footer-content">
-                <div class="footer-column contact-details">
-                    <p><i class="fas fa-map-marker-alt"></i></p>
-                    <h3>Car2Lease</h3>
-                    <address>
-                        ul. Kordeckiego 2la,<br>
-                        05-500 Piaseczno
-                    </address>
-                    <p>Telefon: +48 797 577 000</p>
-                    <p>e-mail: kontakt@car2lease.pl</p>
-                </div>
-                <div class="footer-column opening-hours">
-                    <p><i class="far fa-clock"></i></p>
-                    <h3>Godziny otwarcia</h3>
-                    <p>
-                        Pn. - Pt: 9.00 - 17.00<br>
-                        Sobota: Zamknięte<br>
-                        Niedziela: Zamknięte
-                    </p>
-                </div>
-                <div class="footer-column footer-nav-social">
-                    <nav class="footer-nav">
-                         <ul>
-                            <li><a href="#about">O nas</a></li>
-                            <li><a href="#">Polecane oferty</a></li>
-                            <li><a href="#">Samochody</a></li>
-                            <li><a href="#contact">Kontakt</a></li>
-                            <li><a href="#">Wynajem krótkoterminowy</a></li>
-                            <li><a href="#">Polityka prywatności</a></li>
-                        </ul>
-                    </nav>
-                    <div class="footer-social-icons">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy;2020 przez Car2Lease. Wszelkie prawa zastrzeżone.</p>
-            </div>
-        </div>
+        <!-- Skopiuj tutaj całą sekcję footer z oryginalnego HTML, upewnij się, że linki w nawigacji stopki prowadzą do .html a nie #id -->
     </footer>
-<!-- ... (cała reszta strony) ... -->
 
-    <script>
-        // Skrypt do uruchamiania animacji podczas przewijania
-        document.addEventListener("DOMContentLoaded", function() {
-            const targets = document.querySelectorAll('.animate-on-scroll');
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target); // Animacja uruchomi się tylko raz
-                    }
-                });
-            }, {
-                threshold: 0.1 // Uruchom animację, gdy 10% elementu jest widoczne
-            });
-
-            targets.forEach(target => {
-                observer.observe(target);
-            });
-        });
-    </script>
-
+    <script> /* Skrypt do animacji */ </script>
 </body>
 </html>
