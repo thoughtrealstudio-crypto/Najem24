@@ -3,67 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Car2Lease</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .hero-section { height: 50vh; min-height: 400px; } .hero-content h1 { color: #fff; }
-        .contact-page-content { padding: 80px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: center; }
-        .contact-page-content .contact-column { background: #f9f9f9; padding: 40px; border-radius: 8px; }
-        .contact-page-content h3 { font-size: 24px; color: var(--color-dark-text); margin-bottom: 20px; }
-        .contact-page-content p { color: var(--color-gray-text); line-height: 1.8; }
-        .contact-page-content i { font-size: 36px; color: var(--color-primary); margin-bottom: 20px; }
-    </style>
+    <title>Kontakt - Najem24</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- =================   HEADER   ================= -->
-    <header class="main-header">
+
+    <header>
         <div class="container">
-            <a href="index.html" class="logo">...</a>
-            <nav class="main-nav">
+            <a href="index.html" class="logo">Najem24</a>
+            <nav>
                 <ul>
-                    <!-- Note: Links now point to the index.html sections -->
-                    <li><a href="/oferta.html" class="active">Oferta</a></li>
-                    <li><a href="/wynajem-z-oc.html">Wynajem z OC</a></li>
-                    <li><a href="/o-nas.html">O Nas</a></li>
-                    <li><a href="/kontakt.html">Kontakt</a></li>
+                    <li><a href="oferta.html">Oferta</a></li>
+                    <li><a href="wynajem-z-oc.html">Wynajem z OC</a></li>
+                    <li><a href="o-nas.html">O Nas</a></li>
+                    <li><a href="kontakt.html" class="active">Kontakt</a></li>
                 </ul>
             </nav>
-            <div class="header-actions">...</div>
         </div>
     </header>
 
     <main>
-        <!-- =================   SUBPAGE HERO   ================= -->
-        <section class="hero-section">
-            <div class="hero-background"></div>
-            <div class="container"><div class="hero-content"><h1 class="animate-on-scroll fade-in-up">Skontaktuj się z nami</h1></div></div>
-        </section>
-
-        <!-- =================   CONTACT CONTENT   ================= -->
-        <section class="contact-page-content">
+        <section id="contact-page" class="dark-section">
             <div class="container">
-                <div class="contact-column animate-on-scroll fade-in-up">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Nasz Adres</h3>
-                    <p>ul. Kordeckiego 2la,<br>05-500 Piaseczno</p>
+                <div class="page-header">
+                    <h1>Skontaktuj się z nami</h1>
+                    <p>Masz pytania lub chcesz zarezerwować samochód? Jesteśmy do Twojej dyspozycji.</p>
                 </div>
-                <div class="contact-column animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3>Dane Kontaktowe</h3>
-                    <p>Telefon: +48 797 577 000<br>E-mail: kontakt@car2lease.pl</p>
+
+                <div class="contact-layout">
+                    <!-- LEFT COLUMN: CONTACT DETAILS -->
+                    <div class="contact-details">
+                        <h2>Informacje Kontaktowe</h2>
+                        <div class="info-block">
+                            <h4><i class="icon">📍</i> Adres Biura</h4>
+                            <!-- Replace with your actual address -->
+                            <p>ul. Motoryzacyjna 1<br>00-001 Warszawa, Polska</p>
+                        </div>
+                        <div class="info-block">
+                            <h4><i class="icon">📞</i> Telefon</h4>
+                            <!-- Replace with your phone number -->
+                            <a href="tel:+48123456789">+48 123 456 789</a>
+                        </div>
+                        <div class="info-block">
+                            <h4><i class="icon">📧</i> E-mail</h4>
+                            <!-- Replace with your email -->
+                            <a href="mailto:biuro@najem24.pl">biuro@najem24.pl</a>
+                        </div>
+                        
+                        <div class="info-block">
+                            <h4><i class="icon">🕒</i> Godziny Otwarcia</h4>
+                            <p>Poniedziałek - Piątek: 9:00 - 18:00</p>
+                            <p>Sobota: 10:00 - 14:00</p>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: CONTACT FORM -->
+                    <div class="contact-form-container">
+                        <h2>Napisz do nas</h2>
+                        <form action="#" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Imię i Nazwisko</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Adres E-mail</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Temat</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Wiadomość</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Wyślij Wiadomość</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="contact-column animate-on-scroll fade-in-up" style="animation-delay: 0.4s;">
-                    <i class="far fa-clock"></i>
-                    <h3>Godziny otwarcia</h3>
-                    <p>Pon. - Pt: 9.00 - 17.00<br>Sobota i Niedziela: Zamknięte</p>
+
+                <!-- MAP SECTION -->
+                <div class="map-section">
+                    <h2 class="section-title">Nasza Lokalizacja</h2>
+                     <!-- 1. Go to Google Maps. 2. Find your address. 3. Click "Share". 4. Click "Embed a map". 5. Copy HTML and paste it here, replacing the existing iframe. -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.771968846014!2d21.010190215949015!3d52.22977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sPa%C5%82ac%20Kultury%20i%20Nauki!5e0!3m2!1spl!2spl!4v1672520853765!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
+
             </div>
         </section>
     </main>
-    
-    <!-- =================   FOOTER   ================= -->
-    <footer class="main-footer-section">...</footer>
-    <script> /* Skrypt do animacji */ </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Najem24. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
