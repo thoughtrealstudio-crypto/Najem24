@@ -3,53 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oferta - Car2Lease</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <style>.hero-section { height: 50vh; min-height: 400px; } .hero-content h1 { color: #fff; }</style>
+    <title>Oferta - Najem24</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- =================   HEADER   ================= -->
-    <header class="main-header">
+
+    <header>
         <div class="container">
-            <a href="index.html" class="logo">...</a>
-            <nav class="main-nav">
+            <!-- Link to homepage -->
+            <a href="index.html" class="logo">Najem24</a>
+            <nav>
                 <ul>
-                    <li><a href="o-nas.html">O Nas</a></li>
-                    <li><a href="oferta.html" class="active-link">Oferta</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                    <li><a href="wynajem-z-oc.html">Wynajem z OC</a></li>
+                    <!-- Note: Links now point to the index.html sections -->
+                    <li><a href="oferta.html" class="active">Oferta</a></li>
+                    <li><a href="index.html#wynajem-oc">Wynajem z OC</a></li>
+                    <li><a href="index.html#o-nas">O Nas</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
                 </ul>
             </nav>
-            <div class="header-actions">...</div>
         </div>
     </header>
 
     <main>
-        <!-- =================   SUBPAGE HERO   ================= -->
-        <section class="hero-section">
-            <div class="hero-background"></div>
-            <div class="container"><div class="hero-content"><h1 class="animate-on-scroll fade-in-up">Nasza Oferta</h1></div></div>
-        </section>
+        <section id="oferta-page" class="dark-section">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Nasza flota</h1>
+                    <p>Wybierz samochód, który spełni wszystkie Twoje oczekiwania.</p>
+                </div>
 
-        <!-- =================   FEATURED CARS (Pełna sekcja)   ================= -->
-        <section class="featured-cars-section" style="padding-top: 80px;">
-            <!-- Skopiuj tutaj całą sekcję <section class="featured-cars-section"> -->
-        </section>
-        
-        <!-- =================   OFFER TYPES   ================= -->
-        <section class="offer-section">
-             <!-- Skopiuj tutaj całą sekcję <section id="offer"> -->
-        </section>
+                <div class="car-grid">
+                    <!-- CAR TILE 1 -->
+                    <div class="car-tile">
+                        <!-- Replace with your car image -->
+                        <img src="https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Audi A6">
+                        <div class="car-info">
+                            <h3>Audi A6</h3>
+                            <div class="car-price">od 350 zł / dzień</div>
+                            <ul class="car-specs">
+                                <li>Silnik: 2.0 TDI</li>
+                                <li>Skrzynia: Automatyczna</li>
+                                <li>Paliwo: Diesel</li>
+                                <li>Miejsca: 5</li>
+                            </ul>
+                            <a href="#" class="tile-button">Zapytaj o dostępność</a>
+                        </div>
+                    </div>
 
-        <!-- =================   PARTNERS   ================= -->
-        <section class="partners-section">
-            <!-- Skopiuj tutaj całą sekcję <section class="partners-section"> -->
+                    <!-- CAR TILE 2 -->
+                    <div class="car-tile">
+                        <!-- Replace with your car image -->
+                        <img src="https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="BMW Serii 3">
+                        <div class="car-info">
+                            <h3>BMW Serii 3</h3>
+                            <div class="car-price">od 320 zł / dzień</div>
+                            <ul class="car-specs">
+                                <li>Silnik: 2.0 Benzyna</li>
+                                <li>Skrzynia: Automatyczna</li>
+                                <li>Paliwo: Benzyna</li>
+                                <li>Miejsca: 5</li>
+                            </ul>
+                            <a href="#" class="tile-button">Zapytaj o dostępność</a>
+                        </div>
+                    </div>
+
+                    <!-- CAR TILE 3 -->
+                    <div class="car-tile">
+                        <!-- Replace with your car image -->
+                        <img src="https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mercedes-Benz Klasa C">
+                        <div class="car-info">
+                            <h3>Mercedes-Benz Klasa C</h3>
+                            <div class="car-price">od 340 zł / dzień</div>
+                            <ul class="car-specs">
+                                <li>Silnik: 1.8 Kompressor</li>
+                                <li>Skrzynia: Automatyczna</li>
+                                <li>Paliwo: Benzyna</li>
+                                <li>Miejsca: 5</li>
+                            </ul>
+                            <a href="#" class="tile-button">Zapytaj o dostępność</a>
+                        </div>
+                    </div>
+
+                    <!-- CAR TILE 4 -->
+                    <div class="car-tile">
+                        <!-- Replace with your car image -->
+                        <img src="https://images.pexels.com/photos/909907/pexels-photo-909907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Skoda Octavia">
+                        <div class="car-info">
+                            <h3>Skoda Octavia</h3>
+                            <div class="car-price">od 210 zł / dzień</div>
+                            <ul class="car-specs">
+                                <li>Silnik: 1.5 TSI</li>
+                                <li>Skrzynia: Manualna</li>
+                                <li>Paliwo: Benzyna</li>
+                                <li>Miejsca: 5</li>
+                            </ul>
+                            <a href="#" class="tile-button">Zapytaj o dostępność</a>
+                        </div>
+                    </div>
+
+                    <!-- CAR TILE 5 -->
+                    <div class="car-tile">
+                        <!-- Replace with your car image -->
+                        <img src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Toyota RAV4">
+                        <div class="car-info">
+                            <h3>Toyota RAV4</h3>
+                            <div class="car-price">od 280 zł / dzień</div>
+                            <ul class="car-specs">
+                                <li>Silnik: 2.5 Hybrid</li>
+                                <li>Skrzynia: Automatyczna</li>
+                                <li>Paliwo: Hybryda</li>
+                                <li>Miejsca: 5</li>
+                            </ul>
+                            <a href="#" class="tile-button">Zapytaj o dostępność</a>
+                        </div>
+                    </div>
+
+                    <!-- CAR TILE 6 -->
+                    <div class="car-tile">
+                        <!-- Replace with your car image -->
+                        <img src="https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Volkswagen Passat">
+                        <div class="car-info">
+                            <h3>Volkswagen Passat</h3>
+                            <div class="car-price">od 250 zł / dzień</div>
+                            <ul class="car-specs">
+                                <li>Silnik: 2.0 TDI</li>
+                                <li>Skrzynia: Automatyczna</li>
+                                <li>Paliwo: Diesel</li>
+                                <li>Miejsca: 5</li>
+                            </ul>
+                            <a href="#" class="tile-button">Zapytaj o dostępność</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </section>
     </main>
-    
-    <!-- =================   FOOTER   ================= -->
-    <footer id="contact" class="main-footer-section">...</footer>
-    <script> /* Skrypt do animacji */ </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Najem24. Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
