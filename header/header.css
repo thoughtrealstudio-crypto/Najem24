@@ -1,0 +1,20 @@
+/* Plik: header.css */
+.main-header { background-color: rgba(28, 28, 28, 0.8); position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 15px 0; backdrop-filter: blur(10px); }
+.main-header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; align-items: center; font-weight: 700; font-size: 20px; color: var(--color-light-text); }
+.logo svg { margin-right: 10px; }
+.main-nav ul { display: flex; gap: 30px; }
+.main-nav a { color: var(--color-light-text); font-weight: 500; font-size: 14px; text-transform: uppercase; position: relative; padding: 5px 0; }
+.main-nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: var(--color-primary); transition: width 0.3s ease; }
+.main-nav a:hover::after, .main-nav a.active-link::after { width: 100%; }
+.main-nav a.active-link { color: var(--color-primary); }
+.header-actions { display: flex; align-items: center; gap: 25px; color: var(--color-light-text); }
+.social-icons a { margin: 0 8px; color: var(--color-light-text); }
+.social-icons a:hover { color: var(--color-primary); }
+.search-bar { display: flex; align-items: center; background-color: rgba(255, 255, 255, 0.1); border: 1px solid var(--color-gray-text); border-radius: 20px; padding: 5px 15px; }
+.search-bar input { background: transparent; border: none; outline: none; color: var(--color-light-text); margin-left: 10px; width: 120px; }
+.search-bar input::placeholder { color: var(--color-gray-text); }
+.phone-button { border: 2px solid var(--color-primary); padding: 8px 15px; border-radius: 20px; color: var(--color-light-text); font-weight: 500; }
+.phone-button i { margin-right: 8px; color: var(--color-primary); }
+.phone-button:hover { background-color: var(--color-primary); color: var(--color-dark-bg); }
+.phone-button:hover i { color: var(--color-dark-bg); }
