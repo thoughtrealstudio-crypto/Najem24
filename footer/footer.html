@@ -1,20 +1,12 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="footer.css">
-
-
+<!-- TO JEST ZAWARTOŚĆ PLIKU footer.html -->
 <footer class="site-footer">
-    <div class="footer-shape">
-        <!-- Ta fala zostanie wygenerowana przez CSS -->
-    </div>
+    <div class="footer-shape"></div>
     <div class="container">
-        <!-- Wezwanie do działania (Call to Action) -->
         <div class="footer-cta animate-on-scroll fade-in-up">
             <h2>Gotowy na swój nowy samochód?</h2>
             <p>Porozmawiajmy o najlepszej ofercie dla Ciebie.</p>
             <a href="kontakt.html" class="btn btn-primary">Skontaktuj się z nami</a>
         </div>
-
-        <!-- Główna zawartość stopki -->
         <div class="footer-main">
             <div class="footer-column animate-on-scroll fade-in-up" style="animation-delay: 0.1s;">
                 <div class="footer-logo">
@@ -23,7 +15,6 @@
                 </div>
                 <p>15 lat doświadczenia w branży motoryzacyjnej przekładamy na atrakcyjność i jakość naszej oferty.</p>
             </div>
-
             <div class="footer-column animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
                 <h3>Szybkie Linki</h3>
                 <ul class="footer-links">
@@ -34,7 +25,6 @@
                     <li><a href="#">Polityka Prywatności</a></li>
                 </ul>
             </div>
-
             <div class="footer-column animate-on-scroll fade-in-up" style="animation-delay: 0.3s;">
                 <h3>Kontakt</h3>
                 <ul class="footer-contact">
@@ -44,8 +34,6 @@
                 </ul>
             </div>
         </div>
-
-        <!-- Dolna część stopki (prawa autorskie i social media) -->
         <div class="footer-bottom">
             <p class="copyright-text">&copy; <span id="year"></span> Car2Lease. Wszelkie prawa zastrzeżone.</p>
             <div class="footer-social">
@@ -57,7 +45,21 @@
     </div>
 </footer>
 
-<!-- Skrypt do dynamicznego roku w stopce (opcjonalnie, ale fajny detal) -->
 <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.addEventListener("DOMContentLoaded", function() {
+        const targets = document.querySelectorAll('.animate-on-scroll');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        targets.forEach(target => { observer.observe(target); });
+    });
+    // Upewnij się, że element o id 'year' istnieje, zanim przypiszesz mu wartość
+    if (document.getElementById('year')) {
+        document.getElementById('year').textContent = new Date().getFullYear();
+    }
 </script>
