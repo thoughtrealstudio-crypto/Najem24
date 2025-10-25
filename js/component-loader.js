@@ -1,19 +1,10 @@
-// js/component-loader.js
-
-/**
- * Ta funkcja jest uruchamiana PO załadowaniu wszystkich komponentów.
- * Tutaj umieszczamy skrypty, które muszą "widzieć" elementy z nagłówka lub stopki.
- */
+// Plik: js/component-loader.js
 function initializeScripts() {
-    console.log("Komponenty załadowane. Uruchamiam skrypty.");
-
-    // 1. Skrypt do dynamicznego roku w stopce
+    console.log("Komponenty załadowane, inicjalizuję skrypty.");
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
-
-    // 2. Skrypt do animacji przy przewijaniu
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     if (animatedElements.length > 0) {
         const observer = new IntersectionObserver((entries) => {
@@ -24,19 +15,25 @@ function initializeScripts() {
                 }
             });
         }, { threshold: 0.1 });
-
         animatedElements.forEach(element => {
             observer.observe(element);
         });
     }
+    
+    // Dodajemy klasę .active-link do nawigacji
+    const currentPage = window.location.pathname.split("/").pop();
+    if(currentPage === "" || currentPage === "index.html") {
+         // Strona główna nie ma linku do samej siebie, więc nic nie robimy
+    } else {
+        const navLinks = document.querySelectorAll('.main-nav a');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active-link');
+            }
+        });
+    }
 }
 
-/**
- * Funkcja, która pobiera zawartość pliku HTML i wstawia ją do wskazanego kontenera.
- * Zwraca Promise, co pozwala nam czekać na jej zakończenie.
- * @param {string} url - Ścieżka do pliku komponentu (np. 'header.html')
- * @param {string} placeholderId - ID elementu, do którego wstawimy kod (np. 'header-placeholder')
- */
 const loadComponent = (url, placeholderId) => {
     return fetch(url)
         .then(response => {
@@ -53,20 +50,12 @@ const loadComponent = (url, placeholderId) => {
         });
 };
 
-/**
- * Główna logika - uruchamiana, gdy DOM jest gotowy.
- * Używamy Promise.all, aby poczekać, aż OBA komponenty (nagłówek i stopka) się załadują.
- * Dopiero po ich załadowaniu uruchamiamy dodatkowe skrypty.
- */
 document.addEventListener('DOMContentLoaded', () => {
     Promise.all([
         loadComponent('header.html', 'header-placeholder'),
         loadComponent('footer.html', 'footer-placeholder')
     ])
-    .then(() => {
-        // Ta część wykona się tylko wtedy, gdy oba komponenty zostaną pomyślnie wczytane.
-        initializeScripts();
-    })
+    .then(initializeScripts)
     .catch(error => {
         console.error("Wystąpił błąd podczas ładowania komponentu:", error);
     });
