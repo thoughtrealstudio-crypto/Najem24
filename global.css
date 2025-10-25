@@ -425,3 +425,127 @@ nav a.active {
         grid-template-columns: 1fr; /* Stack tiles on mobile */
     }
 }
+/* O NAS*/
+
+/* ===== STYLES FOR O-NAS.HTML (ADD TO END OF CSS) ===== */
+
+#about-page {
+    padding-top: 120px; /* Space for fixed header */
+}
+
+/* --- Mission Section --- */
+.about-mission-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.mission-text {
+    flex: 1;
+}
+
+.mission-text h2 {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.mission-text p {
+    color: var(--secondary-text-color);
+    margin-bottom: 15px;
+}
+
+.mission-image {
+    flex: 1;
+}
+
+.mission-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+
+/* --- Values Section --- */
+.our-values-section {
+    margin-bottom: 80px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.value-card {
+    background-color: #222;
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.value-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.value-card p {
+    color: var(--secondary-text-color);
+    font-size: 0.95rem;
+}
+
+/* --- Team Section --- */
+.team-section .section-title {
+    margin-bottom: 40px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    justify-content: center;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border-color);
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.team-member:hover img {
+    border-color: var(--accent-color);
+}
+
+.team-member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.team-member .role {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* --- Responsive adjustments for O-Nas --- */
+@media (max-width: 768px) {
+    .about-mission-section {
+        flex-direction: column;
+    }
+}
