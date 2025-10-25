@@ -871,3 +871,11 @@ h1, h2, h3, h4 {
     opacity: 1;
     transform: translateY(0);
 }
+//--------------------------------------------------------------------------------
+/* Dodaj to do swojego style.css */
+.main-nav a.active-link {
+    color: var(--color-primary);
+}
+.main-nav a.active-link::after {
+    width: 100%;
+}
