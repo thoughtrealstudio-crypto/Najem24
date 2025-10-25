@@ -1,74 +1,50 @@
+<!-- Plik: index.html -->
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car2Lease - Najlepsze w leasingu</title>
+    <title>Car2Lease - Strona Główna</title>
     
-    <!-- Linki CSS pozostają bez zmian -->
+    <!-- Linki do wszystkich arkuszy stylów -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
     
-    <link rel="stylesheet" href="header/header.css">
-    <link rel="stylesheet" href="footer/footer.css">
-    
+    <!-- Link do Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-    <!-- POPRAWKA 1: Dodano ID "header-placeholder" -->
+    <!-- Pusty kontener na nagłówek -->
     <header id="header-placeholder" class="main-header"></header>
 
     <main>
-        <!-- =================   HERO   ================= -->
+        <!-- Unikalna zawartość dla strony głównej -->
         <section class="hero-section">
             <div class="hero-background"></div>
             <div class="container">
                 <div class="hero-content">
                     <h1 class="animate-on-scroll fade-in-up">Najlepsze<br>w leasingu</h1>
-                    <p class="animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">Sprawdź nasze propozycje samochodów dostępnych od ręki w atrakcyjnej ofercie leasingowej.</p>
+                    <p class="animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">Sprawdź nasze propozycje samochodów dostępnych od ręki.</p>
                     <a href="oferta.html" class="btn btn-primary animate-on-scroll fade-in-up" style="animation-delay: 0.4s;">Zobacz Ofertę <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="progress-bars"><div class="bar active"></div><div class="bar"></div><div class="bar"></div></div>
-        </section>
-
-        <!-- =================   FEATURED CARS (Teaser)   ================= -->
-        <section class="featured-cars-section">
-            <div class="container">
-                <div class="section-header animate-on-scroll fade-in-up" style="text-align: center;">
-                    <h2 style="font-size: 36px; font-weight: 700;">Dostępne od ręki</h2>
-                </div>
-                <div class="cars-grid">
-                    <!-- Tutaj wstaw swoje karty samochodów -->
-                    <article class="car-card animate-on-scroll scale-up">...</article>
-                    <article class="car-card animate-on-scroll scale-up" style="animation-delay: 0.1s;">...</article>
-                    <article class="car-card animate-on-scroll scale-up" style="animation-delay: 0.2s;">...</article>
-                    <article class="car-card animate-on-scroll scale-up" style="animation-delay: 0.3s;">...</article>
-                </div>
-                 <div class="slider-arrow"><i class="fas fa-arrow-right"></i></div>
-            </div>
         </section>
         
-        <!-- =================   ABOUT US (Teaser)   ================= -->
-        <section class="about-section">
+        <section class="featured-cars-section" style="padding: 80px 0;">
             <div class="container">
-                <div class="about-grid">
-                    <div class="about-image animate-on-scroll fade-in-left"><img src="https://i.imgur.com/kS9Lz3y.png" alt="Zespół Car2Lease przy pracy"></div>
-                    <div class="about-text animate-on-scroll fade-in-right" style="animation-delay: 0.2s;">
-                        <div class="section-header"><h2>O NAS</h2></div>
-                        <p>Car2Lease to firma, która została zbudowana w oparciu o 15-letnie doświadczenie w branży motoryzacyjnej.</p>
-                        <a href="o-nas.html" class="btn btn-secondary">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+                <h2>Przykładowe auta</h2>
+                <!-- ... treść sekcji ... -->
             </div>
         </section>
     </main>
-    
-    <!-- POPRAWKA 1: Dodano ID "footer-placeholder" oraz klasę "site-footer" dla stylów -->
+
+    <!-- Pusty kontener na stopkę -->
     <footer id="footer-placeholder" class="site-footer"></footer>
 
-    <!-- POPRAWKA 2 i 3: Usunięto stary blok skryptu i poprawiono nazwę pliku -->
-    <script src="loadcomponent.js"></script>
+    <!-- Pojedynczy link do naszego skryptu ładującego -->
+    <script src="js/component-loader.js"></script>
 
 </body>
 </html>
