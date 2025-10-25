@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Car2Lease</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero-section { height: 50vh; min-height: 400px; } .hero-content h1 { color: #fff; }
+        .contact-page-content { padding: 80px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: center; }
+        .contact-page-content .contact-column { background: #f9f9f9; padding: 40px; border-radius: 8px; }
+        .contact-page-content h3 { font-size: 24px; color: var(--color-dark-text); margin-bottom: 20px; }
+        .contact-page-content p { color: var(--color-gray-text); line-height: 1.8; }
+        .contact-page-content i { font-size: 36px; color: var(--color-primary); margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <!-- =================   HEADER   ================= -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">...</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="o-nas.html">O Nas</a></li>
+                    <li><a href="oferta.html">Oferta</a></li>
+                    <li><a href="kontakt.html" class="active-link">Kontakt</a></li>
+                    <li><a href="wynajem-z-oc.html">Wynajem z OC</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">...</div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =================   SUBPAGE HERO   ================= -->
+        <section class="hero-section">
+            <div class="hero-background"></div>
+            <div class="container"><div class="hero-content"><h1 class="animate-on-scroll fade-in-up">Skontaktuj się z nami</h1></div></div>
+        </section>
+
+        <!-- =================   CONTACT CONTENT   ================= -->
+        <section class="contact-page-content">
+            <div class="container">
+                <div class="contact-column animate-on-scroll fade-in-up">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Nasz Adres</h3>
+                    <p>ul. Kordeckiego 2la,<br>05-500 Piaseczno</p>
+                </div>
+                <div class="contact-column animate-on-scroll fade-in-up" style="animation-delay: 0.2s;">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Dane Kontaktowe</h3>
+                    <p>Telefon: +48 797 577 000<br>E-mail: kontakt@car2lease.pl</p>
+                </div>
+                <div class="contact-column animate-on-scroll fade-in-up" style="animation-delay: 0.4s;">
+                    <i class="far fa-clock"></i>
+                    <h3>Godziny otwarcia</h3>
+                    <p>Pon. - Pt: 9.00 - 17.00<br>Sobota i Niedziela: Zamknięte</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- =================   FOOTER   ================= -->
+    <footer class="main-footer-section">...</footer>
+    <script> /* Skrypt do animacji */ </script>
+</body>
+</html>
