@@ -75,10 +75,85 @@ header .container {
     opacity: 0.9;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
+/* ===== MOBILE NAVIGATION & HAMBURGER MENU (ADD TO END OF CSS) ===== */
+
+/* Hamburger button is hidden by default on desktop */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; /* Must be higher than the nav menu */
+    padding: 10px;
+}
+
+/* The three lines of the hamburger icon */
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* === Styles for Mobile Screens === */
+@media (max-width: 768px) {
+    /* Show the hamburger button */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Style for the navigation panel on mobile */
+    header nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #111;
+        z-index: 1000;
+        transform: translateX(100%); /* Hides the menu off-screen */
+        transition: transform 0.4s ease-in-out;
+        padding-top: 100px;
+    }
+
+    /* When the menu is open, slide it into view */
+    body.nav-open header nav {
+        transform: translateX(0);
+    }
+    
+    /* Style the list inside the mobile menu */
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    header nav ul li {
+        width: 100%;
+    }
+
+    /* Style the links inside the mobile menu */
+    header nav ul a {
+        display: block;
+        padding: 20px 30px;
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    /* Animate the hamburger icon into an 'X' when the menu is open */
+    body.nav-open .hamburger-menu span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    body.nav-open .hamburger-menu span:nth-child(2) {
+        opacity: 0;
+    }
+    body.nav-open .hamburger-menu span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
 nav a {
