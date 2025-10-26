@@ -878,7 +878,7 @@ nav a.active {
 
 .map-container {
     position: relative;
-    padding-bottom: 40%; /* Adjust ratio as needed */
+    padding-bottom: 65%;
     height: 0;
     overflow: hidden;
     border-radius: 8px;
