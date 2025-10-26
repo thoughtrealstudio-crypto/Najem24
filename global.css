@@ -362,21 +362,22 @@ nav a:hover {
 
 /* ===== FOOTER ===== */
 
-/* New layout for the footer content */
+/* DELETE ALL OF THIS CODE */
+
+/* ===== FOOTER DOWNLOAD LINK STYLES (ADD TO END OF CSS) ===== */
+
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows items to stack on small screens */
-    gap: 20px; /* Adds space between items when stacked */
+    flex-wrap: wrap; 
+    gap: 20px; 
 }
 
-/* Make sure the copyright text doesn't have extra margins */
 .copyright-text p {
     margin: 0;
 }
 
-/* Styling for the new download button */
 .footer-download-link {
     color: var(--secondary-text-color);
     border: 1px solid var(--border-color);
@@ -389,18 +390,15 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
-/* Hover effect for the download button */
 .footer-download-link:hover {
     color: var(--accent-color);
     border-color: var(--accent-color);
-    background-color: rgba(212, 175, 55, 0.05); /* Very subtle gold glow */
+    background-color: rgba(212, 175, 55, 0.05);
     transform: translateY(-2px);
 }
 
-/* --- Responsive adjustment for the footer --- */
 @media (max-width: 768px) {
     .footer-content {
-        /* On mobile, stack items vertically and center them */
         flex-direction: column;
         justify-content: center;
     }
