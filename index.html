@@ -16,6 +16,12 @@
             <a href="index.html" class="logo">
                 <img src="najem24logo.png" alt="Najem24 Logo">
             </a>
+
+            <button class="hamburger-menu" aria-label="Otwórz menu nawigacji">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <ul>
                     <!-- Note: Links now point to the index.html sections -->
@@ -113,6 +119,23 @@
             <p>&copy; 2024 Najem24. Wszystkie prawa zastrzeżone.</p>
         </div>
     </footer>
+
+        <!-- ... your footer ... -->
+    </footer>
+
+    <!-- ADD THIS SCRIPT BLOCK -->
+    <script>
+        const hamburger = document.querySelector('.hamburger-menu');
+        const nav = document.querySelector('header nav');
+
+        hamburger.addEventListener('click', () => {
+            document.body.classList.toggle('nav-open');
+        });
+    </script>
+    <!-- END OF SCRIPT BLOCK -->
+
+</body>
+</html>
 
 </body>
 </html>
