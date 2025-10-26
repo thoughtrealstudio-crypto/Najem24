@@ -361,39 +361,48 @@ nav a:hover {
 }
 
 /* ===== FOOTER ===== */
-footer {
-    border-top: 1px solid var(--border-color);
-    padding: 30px 0;
-    text-align: center;
-    color: var(--secondary-text-color);
+
+/* New layout for the footer content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to stack on small screens */
+    gap: 20px; /* Adds space between items when stacked */
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* Make sure the copyright text doesn't have extra margins */
+.copyright-text p {
+    margin: 0;
+}
+
+/* Styling for the new download button */
+.footer-download-link {
+    color: var(--secondary-text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the download button */
+.footer-download-link:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-color: rgba(212, 175, 55, 0.05); /* Very subtle gold glow */
+    transform: translateY(-2px);
+}
+
+/* --- Responsive adjustment for the footer --- */
 @media (max-width: 768px) {
-    .content-split {
+    .footer-content {
+        /* On mobile, stack items vertically and center them */
         flex-direction: column;
-        text-align: center;
-    }
-
-    .info-left h2::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .stats-right ul {
-        margin-top: 40px;
-    }
-
-    .stats-right li {
         justify-content: center;
-    }
-
-    nav ul {
-        display: none; /* Simple hiding for mobile, a JS-based menu would be better */
-    }
-
-    #hero h1 {
-        font-size: 2.2rem;
     }
 }
 /* OFERTA */
