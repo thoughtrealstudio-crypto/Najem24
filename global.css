@@ -75,7 +75,31 @@ header .container {
     opacity: 0.9;
 }
 
-/* ===== MOBILE NAVIGATION & HAMBURGER MENU (ADD TO END OF CSS) ===== */
+/* ========================================= */
+/* ===== CORRECTED NAVIGATION STYLES ===== */
+/* ========================================= */
+
+/* --- ADD THIS BLOCK FOR DESKTOP NAVIGATION --- */
+header nav ul {
+    display: flex;          /* This makes the menu horizontal on desktop */
+    list-style: none;       /* Removes the default bullet points */
+    gap: 25px;              /* Sets the spacing between menu items */
+}
+/* --- END OF ADDED BLOCK --- */
+
+nav a {
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+
+/* --- MOBILE NAVIGATION & HAMBURGER MENU --- */
 
 /* Hamburger button is hidden by default on desktop */
 .hamburger-menu {
@@ -126,7 +150,7 @@ header .container {
     
     /* Style the list inside the mobile menu */
     header nav ul {
-        flex-direction: column;
+        flex-direction: column; /* This OVERRIDES the desktop 'flex' and stacks items vertically */
         align-items: center;
         gap: 0;
     }
@@ -155,18 +179,6 @@ header .container {
         transform: translateY(-8px) rotate(-45deg);
     }
 }
-
-nav a {
-    color: var(--text-color);
-    font-weight: 600;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--accent-color);
-}
-
 /* ===== HERO SECTION ===== */
 #hero {
     height: 70vh;
