@@ -809,10 +809,12 @@ nav a.active {
 
 .info-block .icon {
     color: var(--accent-color);
-    margin-right: 10px;
-    font-size: 1.3rem;
-    font-style: normal;
+    margin-right: 12px;
+    font-size: 1.1rem; /* Slightly smaller for elegance */
+    width: 20px; /* Give each icon a consistent container width */
+    text-align: center; /* Center the icon within its container */
 }
+
 
 .info-block p,
 .info-block a {
